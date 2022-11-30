@@ -1,0 +1,53 @@
+.cabecalho {
+    text-align: start;
+    margin-bottom: 14px;
+}
+
+
+.cabecalho ul {
+    list-style: none;
+    display: inline;
+    float: right;
+
+}
+
+.cabecalho li {
+    display: inline;
+    margin: 10px;
+}
+
+.img {
+     display: flex;
+     justify-content: center;
+     width: 900px;
+     height: 293px;
+     margin: -8px 80px 50px 0px;
+}
+
+.conteudo {
+    width: 900px;
+    margin: auto;
+    height: 290px;
+    justify-content: center;
+    text-align: inherit;
+}
+h1, h3, p {
+    text-align:inherit;
+    margin: auto;
+    width: 900px;
+}
+
+h4 {
+    text-align: center;
+}
+
+ol {
+    text-align: left;
+}
+
+.form {
+    text-align: start;
+}
+.pg{
+    text-align: justify;
+}

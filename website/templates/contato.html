@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+   <body background="static/img/fundo2.jpeg">
+
+        <h3>Entre em contato</h3>  
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, tempora expedita sapiente illum quidem, aut fugit perferendis rem adipisci modi facere animi doloribus ex voluptate veritatis facilis, earum similique tenetur!</p>
+        <hr>
+        <div class="form">
+            <form action="{{url_for('routes.contato')}}"method="POST">
+                <label for="email">Email:</label><br>
+                <input type="text" name="email" id="email">
+                <br>
+                <label for="assunto">Assunto:</label><br>
+                <input type="text" name="assunto" id="assunto"><br>
+                <label for="desc">Descrição:</label><br>
+                <textarea name="desc" id="desc" cols="30" rows="5"></textarea><br>
+                <input type="submit" value="Enviar"></input>
+            </form>
+            
+        </div>
+        <br><br><br>
+        <h4>Todos os direitos reservados</h4>
+    </body>
+{% endblock %}
