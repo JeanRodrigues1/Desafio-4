@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if info %}
+    <h1>Últimos emails recebidos:</h1>
+
+    <table class="tabela">
+        <tr>
+            <th>Email</th>
+            <th>Assunto</th>
+            <th>Descrição</th>
+        </tr>
+        {% for i in info %}
+        <tr>
+            <td> {{ i[0] }} </td>
+            <td> {{ i[1] }} </td>
+            <td> {{ i[2] }} </td>
+         </tr>
+         {% endfor %}
+
+    </table> 
+{% else %}
+    <h1>Ainda não recebemos nenhum email.</h1>
+{% endif %}
+
+    <h4>Todos os direitos reservados</h4>
+
+{% endblock %}

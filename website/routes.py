@@ -1,5 +1,5 @@
 from flask import Flask, request, Blueprint, render_template, url_for
-from .database import inserir_dados
+from .database import inserir_dados, buscarinfo
 
 routes = Blueprint('routes',__name__)
 
@@ -11,6 +11,14 @@ def i():
 @routes.route("/home")
 def home():
     return render_template("home.html")
+    
+@routes.route("/info")
+def info():
+    info = buscarinfo()
+    if len(info) > 0:
+        return render_template("info.html", info = buscarinfo())
+    else: 
+        return render_template("info.html")
 
 @routes.route("/contato",methods = ["POST","GET"])
 def contato():
